@@ -1,0 +1,27 @@
+<ion-view view-title="Schlafzimer">
+  <ion-content>
+    <ion-list>
+
+      <ion-item ng-model="status.sz_heizung" disabled>
+        SZ_Heizung
+      </ion-item>
+
+      <ion-item>
+        BZ_Fensterkontakt
+        <div class="item-icon-right">
+          <i ng-if="!status.bz_fensterkontakt" class="icon ion-key"></i>
+          <i ng-if="status.bz_fensterkontakt" class="icon ion-image"></i>
+        </div>
+      </ion-item>
+      <ion-item>
+        SZ_Fensterkontakt
+        <div class="item-icon-right">
+          <i ng-if="!status.sz_fensterkontakt" class="icon ion-key"></i>
+          <i ng-if="status.sz_fensterkontakt" class="icon ion-image"></i>
+        </div>
+      </ion-item>
+
+
+    </ion-list>
+  </ion-content>
+</ion-view>
