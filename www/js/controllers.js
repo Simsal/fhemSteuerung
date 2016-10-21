@@ -49,7 +49,7 @@ angular.module('starter.controllers', [])
     }
     FhemData.changeStatus(deviceName, status).then(function(response) {
       //do something with response
-      
+
       _this.data = response.data;
     }).catch(function(response) {
       //handle the error
@@ -90,8 +90,26 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('HomeStatusController', function($scope, FhemData) {
+  $scope.homeStatus = '';
+
+  $scope.$on('$ionicView.enter', function(e) {
+
+    FhemData.getStatus('HomeStatus').then(function(response) {
+      $scope.homeStatus = response;
+    })
+  });
+
+  $scope.changeHomeStatus = function(value) {
+    console.log(value);
+    FhemData.changeHomeStatus(value).then(function(response) {
+      //do something with response
+
+      _this.data = response.data;
+    }).catch(function(response) {
+      //handle the error
+    });
+  }
 })
 
 .controller('ArbeitszimmerController', function($scope, FhemData) {

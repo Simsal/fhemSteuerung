@@ -1,0 +1,8 @@
+<ion-view view-title="HomeStatus">
+  <ion-content>
+    <ion-radio ng-model="homeStatus" ng-value="'home'" ng-change="changeHomeStatus('home')">Zuhause</ion-radio>
+    <ion-radio ng-model="homeStatus" ng-value="'gone'" ng-change="changeHomeStatus('gone')">Weg</ion-radio>
+    <ion-radio ng-model="homeStatus" ng-value="'sleep'" ng-change="changeHomeStatus('sleep')">Nacht</ion-radio>
+    <ion-radio ng-model="homeStatus" ng-value="'holliday'" ng-change="changeHomeStatus('holliday')">Urlaub</ion-radio>
+  </ion-content>
+</ion-view>

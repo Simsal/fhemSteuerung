@@ -3,26 +3,26 @@
     <ion-list>
 
       <ion-item ng-model="status.wz_heizung" disabled>
-        WZ_Heizung
+        Heizung
       </ion-item>
       <ion-toggle ng-model="status.wz_stkd_fernseher" ng-change="toggleSocket('WZ_Stkd_Fernseher', status.wz_stkd_fernseher)">
-        WZ_Stkd_Fernseher
+        Steckdose am Fernseher
       </ion-toggle>
       <ion-toggle ng-model="status.wz_stkd_router" ng-change="toggleSocket('WZ_Stkd_Router', status.wz_stkd_router)">
-        WZ_Stkd_Router
+        Steckdose für den Deckenfluter
       </ion-toggle>
       <ion-item>
-        WZ_Fensterkontakt_links
+        Fensterkontakt links
         <div class="item-icon-right">
-          <i ng-if="!status.wz_fensterkontakt_links" class="icon ion-key"></i>
-          <i ng-if="status.wz_fensterkontakt_links" class="icon ion-image"></i>
+          <i ng-if="!status.wz_fensterkontakt_links" class="icon ion-locked"></i>
+          <i ng-if="status.wz_fensterkontakt_links" class="icon ion-unlocked"></i>
         </div>
       </ion-item>
       <ion-item>
-        WZ_Fensterkontakt_rechts
+        Fensterkontakt rechts
         <div class="item-icon-right">
-          <i ng-if="!status.wz_fensterkontakt_rechts" class="icon ion-key"></i>
-          <i ng-if="status.wz_fensterkontakt_rechts" class="icon ion-image"></i>
+          <i ng-if="!status.wz_fensterkontakt_rechts" class="icon ion-locked"></i>
+          <i ng-if="status.wz_fensterkontakt_rechts" class="icon ion-unlocked"></i>
         </div>
       </ion-item>
 
@@ -30,30 +30,3 @@
     </ion-list>
   </ion-content>
 </ion-view>
-
-
-<!-- <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding class="home">
-  <ion-list>
-    <ion-item>
-      <ion-label (click)="itemTapped($event, movie)" >WZ_Heizung</ion-label>
-      <ion-toggle></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>WZ_Stkd_Vitrine</ion-label>
-      <ion-toggle></ion-toggle>
-
-    </ion-item>
-    <ion-item>
-      <ion-label> WZ_Stkd_Fernseher</ion-label>
-      <ion-toggle></ion-toggle>
-
-    </ion-item>
-
-  </ion-list>
-</ion-content> -->

@@ -21,6 +21,11 @@ angular.module('starter.services', [])
 
     changeTemperature: function(deviceName, newTemperature) {
 
+    },
+
+    changeHomeStatus: function(homeStatus) {
+      var url = 'http://192.168.2.100:8083/fhem?cmd=set%20HomeStatus%20scene%20' + homeStatus + '&XHR=1';
+      return $http.jsonp(url);
     }
   }
 })

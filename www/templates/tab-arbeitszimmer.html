@@ -4,14 +4,14 @@
 
 
       <ion-toggle ng-model="status.az_stkd_pc_simon" ng-change="toggleSocket('AZ_Stkd_PC_Simon', status.az_stkd_pc_simon)">
-        AZ_Stkd_PC_Simon
+        PC Steckdose
       </ion-toggle>
 
       <ion-item>
-        AZ_Fensterkontakt
+        Fensterkontakt
         <div class="item-icon-right">
-          <i ng-if="!status.az_fensterkontakt" class="icon ion-key"></i>
-          <i ng-if="status.az_fensterkontakt" class="icon ion-image"></i> 
+          <i ng-if="!status.az_fensterkontakt" class="icon ion-locked"></i>
+          <i ng-if="status.az_fensterkontakt" class="icon ion-unlocked"></i>
         </div>
       </ion-item>
 

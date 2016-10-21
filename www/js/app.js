@@ -77,6 +77,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'ArbeitszimmerController'
       }
     }
+  })
+
+  .state('tab.homeStatus', {
+    url: '/homeStatus',
+    views: {
+      'tab-homeStatus': {
+        templateUrl: 'templates/tab-homeStatus.html',
+        controller: 'HomeStatusController'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback
